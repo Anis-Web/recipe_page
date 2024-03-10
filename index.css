@@ -1,0 +1,137 @@
+:root{
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --eggshell: hsl(30, 54%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --rose-white: hsl(330, 100%, 98%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%)
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--wenge-brown);
+}
+body{
+  background-color: var(--eggshell);
+}
+.mobile{
+  display: none;
+  overflow: hidden;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.container{
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  .desktop{
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  h1{
+    font-weight: 700;
+  }
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0 20px;
+  }
+  .preparation{
+    padding: 20px;
+    background-color: var(--rose-white);
+    border-radius: 10px;
+    h3{
+      color: var(--dark-raspberry);
+    }
+    ul{
+      padding-left: 30px;
+      li{
+        padding: 10px;
+        &::marker{
+          color: var(--dark-raspberry);
+        }
+      }
+    }
+  }
+  .ingredients, .instructions{
+    border-bottom: 1px solid var(--light-grey);
+    .list{
+      padding: 0 0 20px 25px;
+      li{
+        padding: 10px;
+        &::marker{
+          color: var(--nutmeg);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .nutrition{
+    table{
+      border-spacing: 0;
+      width: 100%;
+    }
+    td{
+      width: 50%;
+      padding: 10px 20px;
+      span{
+        color: var(--nutmeg);
+      }
+      &:not(.not){
+        border-bottom: 1px solid var(--light-grey);
+      }
+    }
+  }
+}
+h1,h2{
+  text-transform: capitalize;
+  font-family: "Young Serif", serif;
+  font-style: normal;
+  font-weight: lighter;
+}
+h1{
+  letter-spacing: 1px;
+  color: var(--dark-charcoal);
+}
+h2{
+  color: var(--nutmeg);
+  font-weight: 400;
+  padding: 20px 0 10px;
+}
+span{
+  font-weight: 600;
+}
+@media  screen and (max-width: 700px) {
+  body{
+    background-color: white;
+  }
+  .container{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 25px;
+    .desktop{
+      display: none;
+    }
+  }
+  .mobile{
+    display: block;
+    background-color: white;
+  }
+}
